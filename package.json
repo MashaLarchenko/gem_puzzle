@@ -1,0 +1,40 @@
+{
+  "name": "gem_puzzle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.4.1",
+    "css-loader": "^3.5.3",
+    "eslint-loader": "^4.0.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.1",
+    "image-webpack-loader": "^6.0.0",
+    "style-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --watch",
+    "build": "webpack --mode production",
+    "lint": "eslint src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MashaLarchenko/gem_puzzle.git"
+  },
+  "author": "Maria Larchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MashaLarchenko/gem_puzzle/issues"
+  },
+  "homepage": "https://github.com/MashaLarchenko/gem_puzzle#readme"
+}
