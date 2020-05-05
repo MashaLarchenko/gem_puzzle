@@ -1,0 +1,99 @@
+@import "colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgb(7, 0, 8);
+  color: purple;
+}
+
+.start_container {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/start_img.png"), rgba(255, 253, 253, 0.151);
+  background-blend-mode: hue;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  .startApp_btn {
+    background-color: #0a090ad4;
+    width: 250px;
+    height: 70px;
+  }
+}
+
+.wrapper {
+  background-color: #e7f2fbbf;
+  min-height: calc(100vh - 50px);
+}
+
+.main_window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 1%;
+  width: 70%;
+  height: 70%;
+  // background-color: rgba(255, 255, 255, 0.952);
+}
+
+.puzzle_container {
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  // grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  padding-bottom: 5%;
+  .puzzle_item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #d7adad9e;
+  }
+}
+
+.controller_container {
+  width: 60%;
+  .controllBtn_container,
+  .game_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5% 0;
+  }
+}
+
+.controllBtn_container {
+  border-bottom: 1px solid black;
+  .controllBtn {
+    background-color: #d7adad9e;
+    width: 20%;
+    height: 40px;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+}

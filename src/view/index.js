@@ -1,6 +1,4 @@
+import View from './appview';
 import './appview.scss';
-import View from './appveiw';
 
-export default function viewRender() {
-  View.renderheader();
-}
+export default View;

@@ -1,11 +1,12 @@
-// import Frames from './frames/frames';
-import View from './view/appveiw';
-// import Tools from './model/tools/toolEL';
+import View from './view';
+import listener from './controller';
+// import random from './model/getData';
 
 export default class App {
-  static start() {
-    View.renderheader();
-    // Frames.start();
-    // Tools.start();
+  static async start() {
+    View.renderStartWindow();
+    listener.listenStartApp();
+
+    //  const dataArray = random(16);
   }
 }
