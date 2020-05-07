@@ -5,6 +5,7 @@ export default class Puzzle {
   }
 
   render() {
-    return `<div class='puzzle_item'>${this.number}</div>`;
+    if (this.number === null) return `<div class="puzzle_item ${this.id + 1} void_cell"></div>`;
+    return `<div class='puzzle_item ${this.id + 1}'>${this.number}</div>`;
   }
 }

@@ -31,7 +31,7 @@ export default class View {
 
     document.body.appendChild(wrapper);
     wrapper.appendChild(mainContainer);
-    const gameController = renderGameController();
+    const gameController = renderGameController(0, 0);
     mainContainer.appendChild(gameController);
     mainContainer.appendChild(puzzleContainer);
     renderGameField(this.number);

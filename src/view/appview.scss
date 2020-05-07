@@ -72,6 +72,13 @@
     text-align: center;
     vertical-align: middle;
     background-color: #d7adad9e;
+    &:hover {
+    background-color: #b88f8fb6;
+    }
+  }
+  .void_cell {
+    background-color: #e5bebe7a;
+
   }
 }
 
@@ -95,5 +102,8 @@
     font-size: 1.8rem;
     border-radius: 8px;
     text-align: center;
+    &:hover {
+    background-color: #b88f8fb6;
+    }
   }
 }
