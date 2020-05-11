@@ -25,4 +25,13 @@ const initialData = (maxNumber) => {
   return initialArray;
 };
 
-export default { getRandomData, initialData };
+const checkforSolvingData = () => {
+  const checkingArray = initialData(16);
+  const voidCell = checkingArray[checkingArray.length - 1];
+  const lastCell = checkingArray[checkingArray.length - 2];
+  checkingArray[checkingArray.length - 1] = lastCell;
+  checkingArray[checkingArray.length - 2] = voidCell;
+  return checkingArray;
+};
+
+export { getRandomData, initialData, checkforSolvingData };

@@ -37,6 +37,23 @@ export default class View {
     renderGameField(this.number);
   }
 
+  static renderDataFromStorage(state) {
+    const wrapper = document.createElement('div');
+    const mainContainer = document.createElement('div');
+    const puzzleContainer = document.createElement('div');
+    puzzleContainer.classList.add('puzzle_container');
+    wrapper.classList.add('wrapper');
+    mainContainer.classList.add('main_window');
+
+    document.body.appendChild(wrapper);
+    wrapper.appendChild(mainContainer);
+    const gameController = renderGameController(state.time, state.move);
+
+    mainContainer.appendChild(gameController);
+    mainContainer.appendChild(puzzleContainer);
+    renderGameField(state.data);
+  }
+
   renderPuzzle() {
     renderGameField(this.number);
   }
@@ -47,5 +64,9 @@ export default class View {
 
   static hide(element) {
     element.style.display = 'none';
+  }
+
+  static delete(element) {
+    element.parentNode.removeChild(element);
   }
 }
