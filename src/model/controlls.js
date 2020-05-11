@@ -15,14 +15,17 @@ const updateStorage = () => {
   localStorage.state = JSON.stringify(state);
 };
 
-const updateTimerContainer = (time) => {
+const updateGameData = ({ time, step = state.step }) => {
   const timeContainer = document.querySelector('.timer');
+  const stepContainer = document.querySelector('.movesCount');
+
   timeContainer.innerHTML = `Time: ${time}`;
+  stepContainer.innerHTML = `Step: ${step}`;
 };
 
 const getTime = () => setInterval(() => {
   state.time += 1;
-  updateTimerContainer(state.time);
+  updateGameData(state);
   updateStorage();
   return state.time;
 }, 1000);
@@ -61,7 +64,8 @@ const resetGame = () => {
   state.isPaused = false;
   clearInterval(state.gameTimer);
   state.time = 0;
-  updateTimerContainer(state.time);
+  state.step = 0;
+  updateGameData(state);
   const initialDataArray = initialData(16);
   const puzzle = new View(initialDataArray);
   puzzle.renderPuzzle();
