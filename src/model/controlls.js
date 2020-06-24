@@ -7,20 +7,15 @@ const state = {
   isStarted: false,
   time: 0,
   data: [],
-  step: 0,
 };
 
 const updateStorage = () => {
-  console.log(state);
   localStorage.state = JSON.stringify(state);
 };
 
-const updateGameData = ({ time, step = state.step }) => {
+const updateGameData = ({ time }) => {
   const timeContainer = document.querySelector('.timer');
-  const stepContainer = document.querySelector('.movesCount');
-
   timeContainer.innerHTML = `Time: ${time}`;
-  stepContainer.innerHTML = `Step: ${step}`;
 };
 
 const getTime = () => setInterval(() => {
@@ -53,7 +48,6 @@ const startGame = () => {
 const stopGame = () => {
   state.isPaused = true;
   state.isStarted = false;
-  console.log(state);
   clearInterval(state.gameTimer);
   updateStorage();
 };

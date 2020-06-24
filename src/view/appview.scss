@@ -16,7 +16,8 @@
   line-height: 50px;
   text-align: center;
   background-color: rgb(7, 0, 8);
-  color: purple;
+  color: #cf3fcf;
+  font-size: 1.5rem;
 }
 
 .start_container {
@@ -25,14 +26,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../assets/start_img.png"), rgba(255, 253, 253, 0.151);
+  background: url("../assets/main.jpg"), rgba(255, 253, 253, 0.151);
   background-blend-mode: hue;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   .startApp_btn {
     background-color: #0a090ad4;
-    width: 250px;
-    height: 70px;
+    width: 25%;
+    height: 15%;
+    color: #cf3fcf;
+    font-size: 1.2rem;
   }
 }
 
