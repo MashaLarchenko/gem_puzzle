@@ -48,7 +48,6 @@ const isSwipe = () => {
     const localData = JSON.parse(localState);
     localData.step = step;
     localStorage.state = JSON.stringify(localData);
-    console.log(step, localData.step);
     if (isSolved) {
       solvedPuzzleWindow(time, step);
       stopGame();
